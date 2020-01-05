@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageTableViewCell" rowHeight="125" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="DevelopingAccessibleApps" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="434" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCv-2E-gbM">
+                        <rect key="frame" x="20" y="10" width="178" height="100"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="h41-Ed-oLk"/>
+                            <constraint firstAttribute="width" secondItem="RCv-2E-gbM" secondAttribute="height" multiplier="16:9" id="qiI-qu-KgY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ac-gj-nH6">
+                        <rect key="frame" x="206" y="10" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0ac-gj-nH6" secondAttribute="trailing" constant="20" id="1Kd-zy-2fu"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0ac-gj-nH6" secondAttribute="bottom" constant="10" id="L6S-dy-jts"/>
+                    <constraint firstItem="0ac-gj-nH6" firstAttribute="leading" secondItem="RCv-2E-gbM" secondAttribute="trailing" constant="8" id="PEM-gu-ueD"/>
+                    <constraint firstItem="0ac-gj-nH6" firstAttribute="top" secondItem="RCv-2E-gbM" secondAttribute="top" id="Q2d-Wc-Gyt"/>
+                    <constraint firstItem="RCv-2E-gbM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QVV-65-sQq"/>
+                    <constraint firstAttribute="bottom" secondItem="RCv-2E-gbM" secondAttribute="bottom" constant="10" id="c2O-kg-smQ"/>
+                    <constraint firstItem="RCv-2E-gbM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qKv-03-0Jg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="pictureImageView" destination="RCv-2E-gbM" id="g3o-Je-0BX"/>
+                <outlet property="titleLabel" destination="0ac-gj-nH6" id="e7b-yb-vCi"/>
+            </connections>
+            <point key="canvasLocation" x="163.768115942029" y="57.924107142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

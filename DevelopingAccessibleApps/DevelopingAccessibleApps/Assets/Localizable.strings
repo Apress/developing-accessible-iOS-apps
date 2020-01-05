@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  DevelopingAccessibleApps
+
+  Created by Daniel Devesa Derksen-Staats on 05/01/2020.
+  Copyright © 2020 Desfici Ltd. All rights reserved.
+*/
+
+"accessibilityExamples" = "Accessibility Examples";
+
+"accessibilityLabels" = "Accessibility Labels";
+"adjustTraitValues" = "Adjustable Trait & Values";
+"accessibilityElements" = "Accessibility Elements";
+"customActions" = "Custom Actions";
+"performZEscapeGesture" = "Perform Escape 'Z' Gesture";
+"accessibilityNotifications" = "Accessibility Notifications";
+"dynamicTypeAdaptiveUI" = "Dynamic Type Adaptive UI";
+"dynamicTypeAlternativeUI" = "Dynamic Type Alternative UI";
+"smartInvertColors" = "Smart Invert Colors";
+"largeContentViewer" = "Large Content Viewer";
+"uiSwitch" = "UISwitch";
+"dynamicTypeInWebViews" = "Dynamic Type in web views";
+
+"timeExample" = "Time Example";
+"mostReadExample" = "Most Read Example";
+"accessibilityMostReadExample" = "Most Red Example";
+"mostRead" = "Most read";
+"accessibilityMostRead" = "Most Red";
+"languageExample" = "Language Example";
+
+"vs" = "vs.";

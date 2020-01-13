@@ -14,3 +14,24 @@ Release v1.0 corresponds to the code in the published book, without corrections 
 ## Contributions
 
 See the file Contributing.md for more information on how you can contribute to this repository.
+
+## Setup
+
+### SwiftLint (optional)
+
+[SwiftLint](https://github.com/realm/SwiftLint) analyses Swift code files for formatting style
+and coding conventions enforcement. Any warnings it generates are reported within Xcode.
+
+It is automatically run as part of the build process in our Xcode project.
+
+Installation using [Homebrew](https://brew.sh/):
+
+    brew install swiftlint
+
+Configuration is done in `.swiftlint.yml` files. The main one is in the root of the project directory.
+There can be additional ones in sub-directories, such as `DevelopingAccessibleAppsTests/.swiftlint.yml`,
+which overrides some of the configuration for the unit test files.
+
+The [SwiftLint rules](https://realm.github.io/SwiftLint/rule-directory.html) are available in a list
+with explanations and code examples.
+

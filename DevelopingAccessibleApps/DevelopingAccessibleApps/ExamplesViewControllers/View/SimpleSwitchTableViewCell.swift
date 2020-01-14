@@ -10,10 +10,11 @@ import UIKit
 
 class SimpleSwitchTableViewCell: UITableViewCell {
     static let identifier = String(describing: SimpleSwitchTableViewCell.self)
-   
+
     @IBOutlet weak var settingTitleLabel: UILabel!
-    
+
     override func awakeFromNib() {
-        settingTitleLabel.text = NSLocalizedString("Not a good exaple", comment: "")
+        super.awakeFromNib()
+        settingTitleLabel.text = NSLocalizedString("Not a good exaple", bundle: .main, comment: "")
     }
 }

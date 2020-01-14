@@ -11,9 +11,9 @@ import UIKit
 class AlternativeImageTableViewCell: UITableViewCell {
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    
+
     static let identifier = String(describing: AlternativeImageTableViewCell.self)
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         pictureImageView.image = UIImage(named: "Yosemite")

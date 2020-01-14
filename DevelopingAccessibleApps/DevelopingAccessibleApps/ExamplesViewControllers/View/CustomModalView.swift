@@ -11,23 +11,23 @@ import UIKit
 final class CustomModalView: UIView, NibLoadable {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var bodyTextLabel: UILabel!
-    
+
     var dismissViewActioned: (() -> Void)?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        bodyTextLabel.text = NSLocalizedString("Hello custom modal view!", comment: "")
-        closeButton.setTitle(NSLocalizedString("Close", comment: ""), for: .normal)
+        bodyTextLabel.text = NSLocalizedString("Hello custom modal view!", bundle: .main, comment: "")
+        closeButton.setTitle(NSLocalizedString("Close", bundle: .main, comment: ""), for: .normal)
         layer.cornerRadius = 10.0
     }
-    
+
     override func accessibilityPerformEscape() -> Bool {
         super.accessibilityPerformEscape()
         dismissViewActioned?()
         return true
     }
-    
-    @IBAction func closeButtonPressed(_ sender: Any) {
+
+    @IBAction private func closeButtonPressed(_ sender: Any) {
         dismissViewActioned?()
     }
 }

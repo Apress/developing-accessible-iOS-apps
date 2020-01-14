@@ -13,7 +13,7 @@ class SwitchTableViewController: UITableViewController {
         super.viewDidLoad()
         let simpleSwitchCellNib = UINib(nibName: SimpleSwitchTableViewCell.identifier, bundle: nil)
         let settingsSwitchCellNib = UINib(nibName: SettingsSwitchTableViewCell.identifier, bundle: nil)
-        
+
         tableView.register(simpleSwitchCellNib, forCellReuseIdentifier: SimpleSwitchTableViewCell.identifier)
         tableView.register(settingsSwitchCellNib, forCellReuseIdentifier: SettingsSwitchTableViewCell.identifier)
         tableView.estimatedRowHeight = 100.0
@@ -21,21 +21,21 @@ class SwitchTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        5
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
-        if indexPath.row % 2 == 0 {
+        if indexPath.row.isMultiple(of: 2) {
             cell = tableView.dequeueReusableCell(withIdentifier: SettingsSwitchTableViewCell.identifier, for: indexPath)
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: SimpleSwitchTableViewCell.identifier, for: indexPath)
         }
-        
+
         return cell
     }
 }

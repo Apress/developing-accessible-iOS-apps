@@ -10,6 +10,6 @@ import UIKit
 
 class AccessibilityExampleTableViewCell: UITableViewCell {
     static let identifier = String(describing: AccessibilityExampleTableViewCell.self)
-    
+
     @IBOutlet weak var exampleTitleLabel: UILabel!
 }

@@ -14,15 +14,16 @@ class LargeContentViewerViewController: UIViewController {
     @IBOutlet weak var customBarTabView: UIView!
     @IBOutlet weak var customBarTabImage: UIImageView!
     @IBOutlet weak var customBarTabLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let videosTitle = NSLocalizedString("Videos", comment: "")
-        let videosImage = UIImage(systemName: "play",
-                                  withConfiguration: UIImage.SymbolConfiguration(textStyle: .largeTitle, scale: .large))
+
+        let videosTitle = NSLocalizedString("Videos", bundle: .main, comment: "")
+        let videosImage = UIImage(
+            systemName: "play", withConfiguration: UIImage.SymbolConfiguration(textStyle: .largeTitle, scale: .large)
+        )
         let largeContentViewerInteraction = UILargeContentViewerInteraction()
-        
+
         customBarTabImage.image = videosImage
         customBarTabLabel.text = videosTitle
         customBarView.addInteraction(largeContentViewerInteraction)

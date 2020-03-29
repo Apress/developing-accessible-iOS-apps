@@ -1,11 +1,23 @@
 # Apress Source Code
 
-This repository accompanies [*Developing Accessible iOS Apps: Support VoiceOver, Dynamic Type, and More*](https://www.apress.com/9781484253076) by Daniel Devesa Derksen-Staats (Apress, 2019).
+This repository accompanies [*Developing Accessible iOS Apps: Support VoiceOver, Dynamic Type, and More*](https://www.apress.com/9781484253076) by [Daniel Devesa Derksen-Staats](https://twitter.com/dadederk) (Apress, 2019).
 
 [comment]: #cover
 ![Cover image](9781484253076.jpg)
 
 Download the files as a zip using the green button, or clone the repository to your machine using Git.
+
+## What you'll learn
+* Accessibility labels: configure language, IPA (International phonetic alphabet), get VoiceOver to read puntuation marks, etc.
+* Improve the accessibility of UIKit controls in the context of your app: UISlider, UISwitch, etc. 
+* Create custom actions for VoiceIOver and Switch Control users
+* Advanced VoiceOver gestures: Perform Escape, Magic Tap, etc.
+* Accessibility notifications: Notify your user that the scree/layout changed and posting announcements.
+* Support Dynamic Type.
+* Create an alternative layout when using large text sizes.
+* Support Smart Invert Colors.
+* Support Dynamic Type also in your web content.
+* Implement Large Content Viewer.
 
 ## Releases
 

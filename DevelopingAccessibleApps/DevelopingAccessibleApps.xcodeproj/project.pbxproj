@@ -319,6 +319,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B47D9DA225A238000607C48 /* Build configuration list for PBXNativeTarget "DevelopingAccessibleApps" */;
 			buildPhases = (
+				93DF884823C67B50000BF25C /* Run Script: SwiftLint */,
 				0B47D9AE225A237F00607C48 /* Sources */,
 				0B47D9AF225A237F00607C48 /* Frameworks */,
 				0B47D9B0225A237F00607C48 /* Resources */,
@@ -460,6 +461,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93DF884823C67B50000BF25C /* Run Script: SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script: SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B47D9AE225A237F00607C48 /* Sources */ = {
@@ -702,7 +724,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S367NG72K;
 				INFOPLIST_FILE = DevelopingAccessibleAppsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -724,7 +746,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S367NG72K;
 				INFOPLIST_FILE = DevelopingAccessibleAppsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -745,7 +767,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S367NG72K;
 				INFOPLIST_FILE = DevelopingAccessibleAppsUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -766,7 +788,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S367NG72K;
 				INFOPLIST_FILE = DevelopingAccessibleAppsUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

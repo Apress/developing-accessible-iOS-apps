@@ -29,7 +29,7 @@ class AccessibilityLabelsViewController: UIViewController {
     @IBOutlet weak var withoutPuntuationLabel: UILabel!
     @IBOutlet weak var punctuationVSLabel: UILabel!
     @IBOutlet weak var withPunctuationLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTimeExample()
@@ -38,68 +38,75 @@ class AccessibilityLabelsViewController: UIViewController {
         configureIpaExample()
         configurePunctuationExample()
     }
-    
+
     private func configureTimeExample() {
         let time = "02:48"
         let dateComponentsFormatter = DateComponentsFormatter()
         let timeFormatter = DateFormatter()
-        
+
         timeFormatter.dateFormat = "mm:ss"
         dateComponentsFormatter.allowedUnits = [.minute, .second]
         dateComponentsFormatter.unitsStyle = .short
-        
-        timeExampleLabel.text = NSLocalizedString("timeExample", comment: "")
+
+        timeExampleLabel.text = NSLocalizedString("timeExample", bundle: .main, comment: "")
         timeExampleLabel.accessibilityTraits = UIAccessibilityTraits.header
         nonReadableTimeLabel.text = time
-        timeExampleVsLabel.text = NSLocalizedString("vs", comment: "")
+        timeExampleVsLabel.text = NSLocalizedString("vs", bundle: .main, comment: "")
         readableTimeLabel.text = time
-        
+
         if let date = timeFormatter.date(from: time) {
             let components = Calendar.current.dateComponents([.minute, .second], from: date)
             readableTimeLabel.accessibilityLabel = dateComponentsFormatter.string(from: components)
         }
     }
-    
+
     private func configureMostReadExample() {
-        mostReadExampleLabel.text = NSLocalizedString("mostReadExample", comment: "")
-        mostReadExampleLabel.accessibilityLabel = NSLocalizedString("accessibilityMostReadExample", comment: "")
+        mostReadExampleLabel.text = NSLocalizedString("mostReadExample", bundle: .main, comment: "")
+        mostReadExampleLabel.accessibilityLabel = NSLocalizedString(
+            "accessibilityMostReadExample", bundle: .main, comment: ""
+        )
         mostReadExampleLabel.accessibilityTraits = UIAccessibilityTraits.header
-        incorrectMostReadLabel.text = NSLocalizedString("mostRead", comment: "")
-        mostReadVsLabel.text = NSLocalizedString("vs", comment: "")
-        correctMostReadLabel.text = NSLocalizedString("mostRead", comment: "")
-        correctMostReadLabel.accessibilityLabel = NSLocalizedString("accessibilityMostRead", comment: "")
+        incorrectMostReadLabel.text = NSLocalizedString("mostRead", bundle: .main, comment: "")
+        mostReadVsLabel.text = NSLocalizedString("vs", bundle: .main, comment: "")
+        correctMostReadLabel.text = NSLocalizedString("mostRead", bundle: .main, comment: "")
+        correctMostReadLabel.accessibilityLabel = NSLocalizedString("accessibilityMostRead", bundle: .main, comment: "")
     }
-    
+
     private func configureLanguageExample() {
-        languageExampleLabel.text = NSLocalizedString("languageExample", comment: "")
+        languageExampleLabel.text = NSLocalizedString("languageExample", bundle: .main, comment: "")
         languageExampleLabel.accessibilityTraits = UIAccessibilityTraits.header
         incorrectLanguageLabel.text = "Paella"
-        languageExampleVsLabel.text = NSLocalizedString("vs", comment: "")
+        languageExampleVsLabel.text = NSLocalizedString("vs", bundle: .main, comment: "")
         correctLanguageLabel.text = "Paella"
-        correctLanguageLabel.accessibilityAttributedLabel = NSAttributedString(string: "Paella", attributes: [.accessibilitySpeechLanguage: "es-ES"])
+        correctLanguageLabel.accessibilityAttributedLabel = NSAttributedString(
+            string: "Paella", attributes: [.accessibilitySpeechLanguage: "es-ES"]
+        )
     }
-    
+
     private func configureIpaExample() {
         let text = "Paella is a Valencian rice dish"
-        ipaExampleLabel.text = NSLocalizedString("IPA Notation Example", comment: "")
+        ipaExampleLabel.text = NSLocalizedString("IPA Notation Example", bundle: .main, comment: "")
         ipaExampleLabel.accessibilityTraits = UIAccessibilityTraits.header
         nonIpaLabel.text = text
-        ipaVsLabel.text = NSLocalizedString("vs", comment: "")
+        ipaVsLabel.text = NSLocalizedString("vs", bundle: .main, comment: "")
         let ipaAttributedText = NSMutableAttributedString(string: "Paella is a Valencian rice dish")
         let ipaRange = ipaAttributedText.string.range(of: "Paella")!
-        ipaAttributedText.addAttributes([.accessibilitySpeechIPANotation: "paˈeʎa"], range: NSRange(ipaRange, in: ipaAttributedText.string))
+        ipaAttributedText.addAttributes(
+            [.accessibilitySpeechIPANotation: "paˈeʎa"], range: NSRange(ipaRange, in: ipaAttributedText.string)
+        )
         ipaLabel.text = text
         ipaLabel.accessibilityAttributedLabel = ipaAttributedText
     }
-    
+
     private func configurePunctuationExample() {
         let text = "Text within ‘ and ’ or \" denote either speech or a quotation"
-        punctuationExampleLabel.text = NSLocalizedString("Punctuation Example", comment: "")
+        punctuationExampleLabel.text = NSLocalizedString("Punctuation Example", bundle: .main, comment: "")
         punctuationExampleLabel.accessibilityTraits = UIAccessibilityTraits.header
         withoutPuntuationLabel.text = text
-        punctuationVSLabel.text = NSLocalizedString("vs", comment: "")
+        punctuationVSLabel.text = NSLocalizedString("vs", bundle: .main, comment: "")
         withPunctuationLabel.text = text
-        withPunctuationLabel.accessibilityAttributedLabel = NSAttributedString(string: text,
-                                                                               attributes: [.accessibilitySpeechPunctuation: true])
+        withPunctuationLabel.accessibilityAttributedLabel = NSAttributedString(
+            string: text, attributes: [.accessibilitySpeechPunctuation: true]
+        )
     }
 }

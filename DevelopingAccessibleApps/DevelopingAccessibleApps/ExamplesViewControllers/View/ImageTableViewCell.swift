@@ -13,7 +13,7 @@ class ImageTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 
     static let identifier = String(describing: ImageTableViewCell.self)
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         pictureImageView.image = UIImage(named: "Yosemite")

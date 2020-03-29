@@ -6,16 +6,17 @@
 //  Copyright © 2019 Desfici Ltd. All rights reserved.
 //
 
-import XCTest
 @testable import DevelopingAccessibleApps
+import XCTest
 
 class DevelopingAccessibleAppsTests: XCTestCase {
-
     override func setUp() {
+        super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDown() {
+        super.tearDown()
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
@@ -30,5 +31,4 @@ class DevelopingAccessibleAppsTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
